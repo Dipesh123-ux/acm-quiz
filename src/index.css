@@ -1,0 +1,17 @@
+.text-main{
+  color: #FFFF00;
+  text-align: center;
+  width: 50%;
+  margin-bottom: 5%;;
+
+}
+body{
+  background: #0C0E27;
+}
+.main-head{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
