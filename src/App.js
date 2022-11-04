@@ -5,12 +5,14 @@ import Button from '@mui/material/Button';
 function App() {
 
   const [question,setQuestion] = useState("Click here to Start!");
-  const [count,setCount] = useState(0);
+  const [count,setCount] = useState(localStorage.getItem("count") || 0);
+  console.log();
 
   const handleClick = () => {
     const idx = Math.floor(Math.random() * 11);
     setQuestion(questions[idx]);
     setCount(count=>count+1);
+    localStorage.setItem("count",count);
   }
 
   return (
