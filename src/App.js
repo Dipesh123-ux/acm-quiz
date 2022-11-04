@@ -5,17 +5,27 @@ import Button from '@mui/material/Button';
 function App() {
 
   const [question,setQuestion] = useState("Click here to Start!");
+  const [count,setCount] = useState(0);
 
   const handleClick = () => {
-    const idx = Math.floor(Math.random() * 4);
+    const idx = Math.floor(Math.random() * 11);
     setQuestion(questions[idx]);
+    setCount(count=>count+1);
   }
 
   return (
+    <>
+    <div className="logo" >
+    </div>
+    <div style={{position:"absolute",left:"80%"}} className="text-white m-3 font-weight-bold">
+      <h5>Count</h5>
+      <h1 className="text-center">{count}</h1>
+    </div>
     <div  className="main-head" >
       <h5 className="text-main " >{question}</h5>
       <Button style={{background:"yellow",color:"black"}} onClick={handleClick} variant="contained">Click</Button>
     </div>
+    </>
   );
 }
 
